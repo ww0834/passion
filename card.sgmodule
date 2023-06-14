@@ -6,4 +6,4 @@
 card = script-name=Timecard,update-interval=3600
 
 [Script]
-card = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
+card = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ww0834/mianban.js/main/card.js
