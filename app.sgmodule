@@ -1,0 +1,76 @@
+#!url=https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.sgmodule
+#!name=App解锁合集
+#!desc=转自chxm1023，自己需求不大，删减一点,增加自己需要的
+#!TG频道：https://t.me/chxm1023
+
+#============【使用说明】==============#
+# 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
+
+# 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
+
+# 已解锁App下载地址：https://too.st/chxm1023
+
+[Script]
+#************************************#
+# 百度网盘_在线视频倍率/清晰度
+# hostname = pan.baidu.com
+百度网盘 = type=http-response,pattern=^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
+
+#************************************#
+# Revenuecat解锁系列
+# hostname = api.revenuecat.com
+revenuecat1 = type=http-response,pattern= ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
+revenuecat2 = type=http-request,pattern= ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path= https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js,script-update-interval=0
+
+#************************************#
+# iTunes解锁系列
+# hostname = buy.itunes.apple.com
+iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
+
+#************************************#
+# Nicegram
+# hostname = restore-access.indream.app
+Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ ,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js, requires-body=1
+
+#************************************#
+# 扫描全能王
+# hostname = *.camscanner.com, *.intsig.net
+扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+
+#************************************#
+# 阿里云盘 净化/解锁SVIP
+# hostname = *.aliyundrive.com
+阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
+
+#************************************#
+# 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复
+# hostname = *.aoscdn.com, *.apsapp.cn
+傲软全家桶 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
+
+#************************************#
+# Wink，蛋啵，潮自拍，海报工厂，Chic
+# hostname = api-*.meitu.com
+美图系列 = type=http-response,pattern=^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
+
+#************************************#
+# Xmind-思维导图
+# hostname = www.xmind.cn
+Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.cn\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
+
+#************************************#
+# 夸克
+# hostname = drive*.quark.cn
+夸克 = type=http-response,pattern=^https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuake.js
+
+#************************************#
+# 蜗牛睡眠
+# hostname = snailsleep.net
+蜗牛睡眠 = type=http-response,pattern=^https?:\/\/snailsleep\.net\/snail\/v\d\/profile\/get.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/woniushuimian.js
+
+#************************************#
+# iTranslate 翻译
+# hostname = ssl-api.itranslateapp.com
+iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
+
+[MITM]
+hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,api.revenuecat.com,buy.itunes.apple.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
