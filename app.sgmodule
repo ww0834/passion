@@ -3,6 +3,10 @@
 #!desc=转自chxm1023，自己需求不大，删减一点
 
 [Script]
+
+#趣听去横幅AD
+趣听去横幅 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js, timeout=60, script-update-interval=0
+
 #************************************#
 # 百度网盘_在线视频倍率/清晰度
 # hostname = pan.baidu.com
@@ -54,4 +58,4 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.cn\/.+\/
 iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
 
 [MITM]
-hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
+hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
