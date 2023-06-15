@@ -5,13 +5,13 @@
 [Script]
 
 # > 网易云_评论弹窗
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top" url reject-dict
+"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top" - reject
 # > 网易云_位置请求
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/lbs\/gpsStatus\/upload" url reject-dict
+"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/lbs\/gpsStatus\/upload" - reject
 # > 网易云_每日推荐Tips
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/homepage\/daily\/song\/elf\/notice" url reject-dict
+"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/homepage\/daily\/song\/elf\/notice" - reject
 # > 网易云_通用广告请求
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/" url reject-dict
+"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/" - reject
 # > 网易云_不知道是个啥
 "^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/sp\/flow" - reject
 # > 网易云_屏蔽更新
