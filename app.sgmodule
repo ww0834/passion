@@ -2,47 +2,6 @@
 #!name=App解锁
 #!desc=转自chxm1023，自己需求不大，增删点内容
 
-
-[URL Rewrite]
-# > 网易云_评论弹窗
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/music\/partner\/picked\/user\/top" - reject
-# > 网易云_位置请求
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/lbs\/gpsStatus\/upload" - reject
-# > 网易云_每日推荐Tips
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/homepage\/daily\/song\/elf\/notice" - reject
-# > 网易云_通用广告请求
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ad\/" - reject
-# > 网易云_不知道是个啥
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/sp\/flow" - reject
-# > 网易云_屏蔽更新
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/ios\/upgrade" - reject-dict
-# > 网易云_LIKE音乐上方推广
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/position\/show\/resource" - reject
-# > 网易云_歌单上方推广
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?eapi\/resource-exposure\/config" - reject
-# > 网易云_搜索框专词
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/specialkeyword" - reject
-# > 网易云_首页右上角激励图标
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/link\/scene\/show\/resource" - reject
-# > 网易云_搜索框推荐
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default" - reject
-# > 网易云_评论区下方广告[新版失效]
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/feed\/inserted" - reject
-# > 网易云_评论回复区广告
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/v1\/content\/exposure\/comment" - reject
-# > 网易云_搜索页猜你喜欢[卸载重装]
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/rcmd\/keyword" - reject
-# > 网易云_搜索框填词
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/default\/keyword" - reject
-# > 网易云_评论区右上角
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/comment\/hotcomment\/collect" - reject
-# > 网易云_活动推广
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/resource-exposure\/activity\/config" - reject
-# > 网易云_VIP歌曲提醒框
-"^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/vipcenter/tspopup\/get" - reject
-# > 网易云_搜索页下方热搜Card[自行启用]
-; ^https?:\/\/interface(\d)?\.music\.163\.com\/w?e?api\/search\/chart" - reject
-
 [Script]
 #趣听去横幅AD
 趣听去横幅 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js, timeout=60, script-update-interval=0
@@ -68,7 +27,7 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
 
 #************************************#
-# 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复
+# 傲软,佐糖
 # hostname = *.aoscdn.com, *.apsapp.cn
 傲软全家桶 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
 
@@ -98,4 +57,4 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.cn\/.+\/
 iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
 
 [MITM]
-hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,interface*.music.163.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
+hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
