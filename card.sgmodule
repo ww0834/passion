@@ -3,8 +3,8 @@
 
 
 [Panel]
-card = script-name=card,update-interval=3600
+card = script-name=timecard,update-interval=3600
 
 [Script]
-card = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ww0834/passion/main/card.js
+timecard = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/ww0834/passion/main/timecard.js
 
