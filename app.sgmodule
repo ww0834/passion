@@ -16,6 +16,10 @@
 # hostname = restore-access.indream.app
 Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ ,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js, requires-body=1
 
+# Wink，蛋啵，潮自拍，海报工厂，Chic
+# hostname = api-*.meitu.com
+美图系列 = type=http-response,pattern=^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
+
 #************************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
@@ -57,4 +61,4 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.cn\/.+\/
 iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
 
 [MITM]
-hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
+hostname = %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api-*.meitu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
