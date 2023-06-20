@@ -3,8 +3,6 @@
  * 由@smartmimi编写
  * 原脚本地址：https://raw.githubusercontent.com/smartmimi/conf/master/surge/timecard.js
  * 由@Rabbit-Spec修改
- * 更新日期：2022.06.22
- * 版本：1.0
  -----自用，添加下自己的生日-----
 */
 
@@ -108,10 +106,10 @@ content:tlist[现在list][0]+":"+今天(tnumcount(现在list))+","+tlist[Number(
 function title_random(num){
   let r = Math.floor((Math.random()*10)+1);
   let dic = {
-    1:"再不努力，体制内还能进吗？"，
-    2:"坚持住，你是最棒的！"，
-    3:"不学习，你还能干啥？"，
-    4:"努力，我还能再卷24小时！"，
+    1:"再不努力，体制内还能进吗"，
+    2:"坚持住，你是最棒的"，
+    3:"不学习，你还能干啥?"，
+    4:"努力，我还能再卷24小时"，
     5:"今日宜：吃饭饭  忌：减肥"，
     6:"两眼一睁，开始竞争"，
     7:"先苦后甜，以后摸鱼赚老板钱"，
@@ -119,5 +117,5 @@ function title_random(num){
     9:"我就休息一下下，马上就学"，
     10: "苦我心志，劳我筋骨"
   };
-  return num==0?"祝节日快乐，万事大吉！":dic[r]
+  return num==0?"祝节日快乐，万事大吉":dic[r]
 }
