@@ -2,9 +2,35 @@
 #!name=App解锁＋去广告
 #!desc=转自chxm1023，自己需求不大，增删点内容
 
+[Rule]
+DOMAIN, amap-aos-info-nogw.amap.com,REJECT
+DOMAIN, awaken.amap.com,REJECT
+DOMAIN, free-aos-cdn-image.amap.com,REJECT
+
 [Script]
 #微信公众号去广告
 微信公众号去广告 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=1, max-size=0, timeout=30
+# 移除阿里巴巴通用广告请求
+Alibaba_amdc_reject_27 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Alibaba/Alibaba_amdc_reject.js, timeout=30
+# 导航详情页 - 路线规划、地点详情页、搜索详情页
+Amap_remove_ads_29 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+Amap_remove_ads_30 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(city_feed|mps|search\/sp|tips_operation_location)\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+Amap_remove_ads_31 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search(_poi)?\/sug\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
+Amap_remove_ads_33 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+Amap_remove_ads_34 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/mapapi\/poi\/infolite\/\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+Amap_remove_ads_35 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+# 我的页面 - 个人主页、推广卡片
+Amap_remove_ads_37 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/(highlightV2|home)\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+Amap_remove_ads_38 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+# 附近页
+Amap_remove_ads_40 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+# 开屏广告
+Amap_remove_ads_42 = type=http-response, pattern=^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+# 打车页 - 红点角标、弹窗、推广卡片
+Amap_remove_ads_44 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\??, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+Amap_remove_ads_45 = type=http-response, pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Amap/Amap_remove_ads.js, requires-body=1, max-size=0, timeout=30
+
 
 #趣听去横幅AD
 趣听去横幅 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js, timeout=60, script-update-interval=0
@@ -66,6 +92,20 @@ iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp
 [Map Local]
 #微信公众号去广告
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|relatedarticle)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 高德地图 导航详情页 - 路线规划、地点详情页、搜索详情页
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-(assets|location)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/(mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(_mp)?\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 打车页 - 红点角标、弹窗、推广卡片
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order(_web\/friendly_information|\/car\/king_toolbox_car_bubble)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 其他
+^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [MITM]
-hostname = %APPEND% mp.weixin.qq.com,%APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api-*.meitu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
+hostname = %APPEND% m5.amap.com,m5-zb.amap.com,sns.amap.com,%APPEND% mp.weixin.qq.com,%APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api-*.meitu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
