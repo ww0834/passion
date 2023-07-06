@@ -4,10 +4,10 @@
 
 [Script]
 #微信公众号去广告
-Weixin_Official_Accounts_remove_ads_10 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
+微信公众号去广告 = type=http-response, pattern=http-response, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 
 #趣听去横幅AD
-趣听去横幅 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js, timeout=60, script-update-interval=0
+趣听去横幅 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js, timeout=60, script-update-interval=0
 
 #************************************#
 # 百度网盘_在线视频倍率/清晰度
@@ -63,7 +63,7 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.cn\/.+\/
 # hostname = ssl-api.itranslateapp.com
 iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
 
-[MAP LOCAL]
+[Map Local]
 #微信公众号去广告
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|relatedarticle)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
