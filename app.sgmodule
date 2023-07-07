@@ -1,6 +1,6 @@
 #!转自 https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.sgmodule
-#!name=App解锁＋去广告
-#!desc=转自chxm1023，自己需求不大，增删点内容
+#!name=自用小合集
+#!desc=APP解锁+去广告
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com,REJECT
