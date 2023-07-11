@@ -32,9 +32,9 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
 
 #************************************#
-# 傲软,佐糖
+# 佐糖
 # hostname = *.aoscdn.com, *.apsapp.cn
-傲软全家桶 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
+佐糖 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ztKT.js
 
 #************************************#
 # Wink，蛋啵，潮自拍，海报工厂，Chic
