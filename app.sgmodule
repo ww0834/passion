@@ -8,6 +8,16 @@
 趣听去横幅 = type=http-response, pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$, requires-body=1, max-size=0, script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js, timeout=60, script-update-interval=0
 
 #************************************#
+# 朝暮计划
+# hostname = www.zomoplan.com
+朝暮计划 = type=http-response,pattern=^https?:\/\/www\.zomoplan\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/ZMJH.j
+
+#************************************#
+# 美图秀秀
+# hostname = *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
+美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mtxx.js
+
+#************************************#
 # 百度网盘_在线视频倍率/清晰度
 # hostname = pan.baidu.com
 百度网盘 = type=http-response,pattern=^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/baiducloud.js
@@ -24,7 +34,7 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 #************************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
-扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/CamScanner.js
+扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
 
 #************************************#
 # 阿里云盘 净化/解锁SVIP
@@ -62,4 +72,4 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.cn\/.+\/
 iTranslate翻译 = type=http-response,pattern=^https?:\/\/ssl-api\.itranslateapp\.com\/accounts\/.+\/(subscriptions\/verify|marketing\/consent\/status),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/itranslate.js
 
 [MITM]
-hostname =  %APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api-*.meitu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
+hostname =  *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com,%APPEND% ssl-api.itranslateapp.com,pan.baidu.com,api-*.meitu.com,api.bsapp.com,api.next.bsapp.com,snailsleep.net,drive*.quark.cn,www.xmind.cn,api-*.meitu.com,*.aoscdn.com, *.apsapp.cn,*.aliyundrive.com,restore-access.indream.app,*.camscanner.com, *.intsig.net
