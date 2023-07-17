@@ -3,8 +3,7 @@
 #!system=ios 
 #!转自https://github.com/ddgksf2013/Rewrite/raw/master/Html/Q-Search.conf
 
-hostname = duckduckgo.com
-
+[URL Rewrite]
 #>>>>>>>>>>>>>>>>>>>>>>>翻译
 # yd  xxx (有道词典)
 ^https:\/\/duckduckgo.com\/\?q=yd\+([^&]+).+ http://dict.youdao.com/search?q=$1 302
@@ -52,3 +51,6 @@ hostname = duckduckgo.com
 
 # 无指令  (百度搜索)
 ^https:\/\/duckduckgo.com\/\?q=([^&]+).+ https://www.baidu.com/s?wd=$1 302
+
+[MITM]
+hostname = duckduckgo.com
