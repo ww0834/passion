@@ -60,4 +60,4 @@ Wink = type=http-response,pattern=^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_
 佐糖 = type=http-response,pattern=^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ztKT.js
 
 [MITM]
-hostname = %APPEND% m.baidu.com,*cupfox*,api.bspapp.com,api.next.bspapp.com,*.camscanner.com,missav.com,*.aliyundrive.com,*.intsig.net,*.aoscdn.com,api-*.meitu.com
+hostname = %APPEND% m.baidu.com,*cupfox*,api.bspapp.com,api.next.bspapp.com,*.camscanner.com,missav.com,*.aliyundrive.com,*.intsig.net,*.aoscdn.com,api-*.meitu.com,pan.baidu.com
