@@ -3,22 +3,7 @@
 #!system=ios
 
 
-[Rule]
-
-# QQ空间去广告
-DOMAIN,d3g.qq.com,REJECT
-DOMAIN,bsrv.qq.com,REJECT
-DOMAIN,sq.bls.mdt.qq.com,REJECT
-DOMAIN,adsmind.gdtimg.com,REJECT
-DOMAIN,xj-landing.gdtimg.com,REJECT
-
-
 [URL Rewrite]
-
-# QQ空间去广告
-^http:\/\/(rpt|v|c)\.gdt\.qq\.com\/(creative_view|gdt_stats|gdt_clickwap)\/.+ - reject
-^http:\/\/pgdt\.gtimg\.cn\/gdt\/.+ - reject
-^http:\/\/pgdt\.gtimg\.cn\/.+\/snscosdownload\/SH\/reserved\/.+ - reject
 
 # wk (维基百科)
 ^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+wk https://zh.wikipedia.org/wiki/$2 302
@@ -62,5 +47,17 @@ DOMAIN,xj-landing.gdtimg.com,REJECT
 # g (Google)
 ^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+g https://www.google.com/search?q=$2 302
 
+[Script]
+
+趣听去横幅 = type=http-response,pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js,timeout=60,script-update-interval=0
+missav去弹窗 = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=1,max-size=0,timeout=5,script-path=https://limbopro.com/Adguard/Adblock4limbo.js,script-update-interval=0
+茶杯狐AD = type=http-response,pattern=^https?:/\/.*cupfox\.app\/($|(search|list|s|_next).*$),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js,timeout=60,script-update-interval=0
+百度网盘 = type=http-response,pattern=^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
+阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
+Wink = type=http-response,pattern=^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
+美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mtxx.js
+扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
+佐糖 = type=http-response,pattern=^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ztKT.js
+
 [MITM]
-hostname = %APPEND% m.baidu.com
+hostname = %APPEND% m.baidu.com,*cupfox*,*.bspaapp.com,pan.baidu.com,*.apsapp.cn,*.camscanner.com,*.meitu.com,missav.com,*.aliyundrive.com,*.intsig.net,*.aoscdn.com,api-*.meitu.com,
