@@ -1,0 +1,50 @@
+#!name=增强搜索
+#!desc=Safari全能搜索(需要把Safari的搜索引擎设置为：百度)；转自@zqzess，本人修改自用。
+#!system=ios
+
+[URL Rewrite]
+
+# wk (维基百科)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+wk https://zh.wikipedia.org/wiki/$2 302
+
+# yd  (有道词典)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+yd https://dict.youdao.com/search?q=$2 302
+
+# yh (油猴脚本搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+yh https://greasyfork.org/zh-CN/scripts?q=$2 302
+
+# trc  (Google 译至中)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+trc https://translate.google.com/#view=home&op=translate&sl=auto&tl=zh-CN&text=$2 302
+
+# tre  (Google 译至英)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+tre https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=$2 302
+
+# trj  (Google 译至日)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+trj https://translate.google.com/#view=home&op=translate&sl=auto&tl=ja&text=$2 302
+
+# ys (影视搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+ys https://cupfox.app/s/$2 302
+
+# av (番号搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+av https://www.missav.com/search/$2 302
+
+# jav (番号搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+jav https://javday.tv/search/?wd=$2 302
+
+# jab (番号搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+jab https://jable.tv/search/$2/ 302
+
+# mu (音乐搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+mu https://tools.liumingye.cn/music/#/search/M/song/$2 302
+
+# dm (动漫搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+dm http://www.yinghuavideo.com/search/$2/ 302
+
+# ph (PornHub)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+ph https://cn.pornhub.com/video/search?search=$2 302
+
+# g (Google)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+g https://www.google.com/search?q=$2 302
+
+[MITM]
+hostname = %APPEND% m.baidu.com
