@@ -2,7 +2,23 @@
 #!desc=Safari全能搜索(需要把Safari的搜索引擎设置为：百度)；转自@zqzess，本人修改自用。
 #!system=ios
 
+
+[Rule]
+
+# QQ空间去广告
+DOMAIN,d3g.qq.com,REJECT
+DOMAIN,bsrv.qq.com,REJECT
+DOMAIN,sq.bls.mdt.qq.com,REJECT
+DOMAIN,adsmind.gdtimg.com,REJECT
+DOMAIN,xj-landing.gdtimg.com,REJECT
+
+
 [URL Rewrite]
+
+# QQ空间去广告
+^http:\/\/(rpt|v|c)\.gdt\.qq\.com\/(creative_view|gdt_stats|gdt_clickwap)\/.+ - reject
+^http:\/\/pgdt\.gtimg\.cn\/gdt\/.+ - reject
+^http:\/\/pgdt\.gtimg\.cn\/.+\/snscosdownload\/SH\/reserved\/.+ - reject
 
 # wk (维基百科)
 ^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+wk https://zh.wikipedia.org/wiki/$2 302
