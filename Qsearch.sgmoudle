@@ -49,7 +49,6 @@
 
 [Script]
 # 自己添加mitm
-微信公众号去广告 = type=http-response,pattern=^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad,requires-body=1,max-size=0,script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/CommonScript/replace-body.js,timeout=60,argument="advertisement->ddgksf2013"
 趣听去横幅 = type=http-response,pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js,timeout=60,script-update-interval=0
 missav去弹窗 = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=1,max-size=0,timeout=5,script-path=https://limbopro.com/Adguard/Adblock4limbo.js,script-update-interval=0
 茶杯狐AD = type=http-response,pattern=^https?:/\/.*cupfox\.app\/($|(search|list|s|_next).*$),requires-body=1,max-size=0,script-path=https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js,timeout=60,script-update-interval=0
