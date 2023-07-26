@@ -47,17 +47,5 @@
 # g (Google)
 ^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+g https://www.google.com/search?q=$2 302
 
-[Script]
-# 自己添加mitm
-趣听去横幅 = type=http-response,pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js,timeout=60,script-update-interval=0
-missav去弹窗 = type=http-response,pattern="^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*",requires-body=1,max-size=0,timeout=5,script-path=https://limbopro.com/Adguard/Adblock4limbo.js,script-update-interval=0
-百度网盘 = type=http-response,pattern=^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
-阿里云盘 = type=http-response,pattern=^https?:\/\/(api|member)\.aliyundrive\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/alidrive.js
-Wink = type=http-response,pattern=^https:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
-美图秀秀 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mtxx.js
-扫描全能王 = type=http-response,pattern=^https:\/\/.*\.(intsig\.net|camscanner\.com),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/smqnw.js
-佐糖 = type=http-response,pattern=^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ztKT.js
-简讯 = type=http-response,pattern=^https?:\/\/api\.tipsoon\.com/api\/v1\/(user\/info|login\/account),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/jianxun.js,timeout=60,script-update-interval=0
-
 [MITM]
 hostname = %APPEND% m.baidu.com
