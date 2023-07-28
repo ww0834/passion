@@ -1,5 +1,5 @@
 #!name=Cookie获取
-#!desc=用于定时签到脚本的Cookie获取，获取后禁用，以免产生不必要的MITM.
+#!desc=用于定时签到脚本的Cookie获取，获取后禁用，以免产生不必要的MITM.滴滴滴滴滴滴
 #!system=ios
 #!转自https://raw.githubusercontent.com/ClydeTime/Surge/main/Task/GetCookie.sgmodule
 
