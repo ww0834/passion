@@ -3,12 +3,6 @@
 #!Safari全能搜索(需要把Safari的搜索引擎设置为：百度)；转自@zqzess，本人修改自用。
 #!system=ios
 
-[Rule]
-DOMAIN-KEYWORD,missav,香港
-DOMAIN-KEYWORD,jable,香港
-DOMAIN-KEYWORD,javday,香港
-DOMAIN-KEYWORD,javlist,香港
-
 
 [URL Rewrite]
 
