@@ -1,0 +1,16 @@
+#!name=TestFlight
+#!desc=账户管理/修正下载
+#!自动存储/合并多个TestFlight账户列表, 并可导出/分享TestFlight App。
+#!system=ios
+#!author=NobyDa
+#!repo=https://github.com/NobyDa/Script/tree/master
+
+[General]
+skip-proxy = %APPEND% iosapps.itunes.apple.com
+
+[Script]
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
+
+[MITM]
+hostname = %APPEND% testflight.apple.com
