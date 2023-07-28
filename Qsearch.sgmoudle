@@ -1,6 +1,15 @@
 #!name=增强搜索
-#!desc=Safari全能搜索(需要把Safari的搜索引擎设置为：百度)；转自@zqzess，本人修改自用。
+#!desc=🍉🍉
+#!Safari全能搜索(需要把Safari的搜索引擎设置为：百度)；转自@zqzess，本人修改自用。
 #!system=ios
+
+[Rule]
+# DOMAIN-SUFFIX,vercel.app,Proxy
+# DOMAIN,gdmf.apple.com,REJECT
+DOMAIN-KEYWORD,missav,香港
+DOMAIN-KEYWORD,jable,香港
+DOMAIN-KEYWORD,javday,香港
+DOMAIN-KEYWORD,javlist,香港
 
 
 [URL Rewrite]
@@ -34,6 +43,9 @@
 
 # jab (番号搜索)
 ^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+jab https://jable.tv/search/$2/ 302
+
+# fh (番号搜索)
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=fh.*$ https://javlist.me 302
 
 # mu (音乐搜索)
 ^https:\/\/m\.baidu\.com/s\?from=(.+)&word=([^&]+)\+mu https://tools.liumingye.cn/music/#/search/M/song/$2 302
