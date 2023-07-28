@@ -4,8 +4,6 @@
 #!system=ios
 
 [Rule]
-# DOMAIN-SUFFIX,vercel.app,Proxy
-# DOMAIN,gdmf.apple.com,REJECT
 DOMAIN-KEYWORD,missav,香港
 DOMAIN-KEYWORD,jable,香港
 DOMAIN-KEYWORD,javday,香港
