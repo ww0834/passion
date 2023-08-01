@@ -1,19 +1,19 @@
 /*
 脚本引用自https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BaiduCloud.js
 */
-let Premium = $response.body;
-var modified = JSON.parse(Premium);
-modified = {
+
+var baiducloud = JSON.parse($response.body);
+baiducloud = {
   "product_infos" : [
     {
       "cur_svip_type" : "Crack",
       "product_name" : "svip2_nd",
-      "product_description" : "解锁倍速+画质",
+      "product_description" : "解锁倍速+画质+爱你",
       "function_num" : 510004015,
       "start_time" : 1672502400,
-      "buy_description" : "无下载加速",
+      "buy_description" : "不可下载加速",
       "buy_time" : 980784000,
-      "product_id" : "问好",
+      "product_id" : "你好",
       "auto_upgrade_to_svip" : 0,
       "end_time" : 4070880000,
       "cluster" : "vip",
@@ -25,4 +25,4 @@ modified = {
     "current_level" : 10,
   }
 };
-$done({body:JSON.stringify(modified)});
+$done({body:JSON.stringify(baiducloud)});
