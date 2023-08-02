@@ -1,9 +1,3 @@
-/*
-[rewrite_local]
-^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/ww0834/passion/main/baiducloud.js
-[mitm] 
-hostname = pan.baidu.com
-*/
 
 var baiducloud = JSON.parse($response.body);
 baiducloud = {
