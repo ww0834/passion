@@ -3,7 +3,7 @@
 
 [Script]
 趣听AD = type=http-response,pattern=^https?:\/\/(api|api\.next)\.bspapp\.com\/client$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/quting.js
-百度网盘 = type=http-response,pattern=^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/baiducloud.js
+百度网盘 = type=http-response,pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/ww0834/passion/main/baiducloud.js
 
 [MITM]
-hostname = %APPEND% api.bspapp.com,api.next.bsapp.com,pan.baidu.com
+hostname = %APPEND% api.bspapp.com,api.next.bspapp.com,pan.baidu.com
