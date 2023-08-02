@@ -4,4 +4,4 @@
 [mitm] 
 hostname = api.bspapp.com,api.next.bspapp.com
 */
-var body = $response.body。replace(/\"bannerList":\[.+\]/g， '\"bannerList":[]');$done({body});
+var body = $response.body.replace(/\"bannerList":\[.+\]/g， '\"bannerList":[]');$done({body});
