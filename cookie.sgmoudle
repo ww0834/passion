@@ -25,11 +25,14 @@ B站Cookie(网页) = type=http-request,pattern=^https?:\/\/m.bilibili.com/$,scri
 
 贴吧Cookie2 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/TieBa.js,requires-body=0
 
-彩云天气cookie = type=http-request,pattern=https:\/\/((weather-data\.apple)|(api.weather))\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js,script-update-interval=259200
+彩云天气Cookie = type=http-request,pattern=https:\/\/((weather-data\.apple)|(api.weather))\.com,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Peng-YM/QuanX/master/Tasks/caiyun.js,script-update-interval=259200
 
 获取京东Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 
-高德地图 = type=http-request,pattern=https://m5.amap.com/ws/alice/activity/daily_sign/do_sign,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/GDTu.js,timeout=60,script-update-interval=0
+高德地图Cookie = type=http-request,pattern=https://m5.amap.com/ws/alice/activity/daily_sign/do_sign,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/GDTu.js,timeout=60,script-update-interval=0
+
+交管12123token = type=http-request,pattern=^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz,requires-body=1,max-size=0,timeout=1000,script-path=https://gitcode.net/4qiao/scriptable/raw/master/quanX/getToken_12123.js,script-update-interval=0
+
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, m.bilibili.com, mobile.ximalaya.com, auth.aliyundrive.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, ngabbs.com, m5.amap.com, iacc.rec.qq.com, c.tieba.baidu.com, tiebac.baidu.com,passport.iqiyi.com,api.weather.com,weather-data.apple.com,ms.jr.jd.com, me-api.jd.com, api.m.jd.com
+hostname = %APPEND% app.bilibili.com, miniappcsfw.122.gov.cn, m.bilibili.com, mobile.ximalaya.com, auth.aliyundrive.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, ngabbs.com, m5.amap.com, iacc.rec.qq.com, c.tieba.baidu.com, tiebac.baidu.com,passport.iqiyi.com,api.weather.com,weather-data.apple.com,ms.jr.jd.com, me-api.jd.com, api.m.jd.com
