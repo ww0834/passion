@@ -1,12 +1,12 @@
 /*************************************
 
-项目名称：一刻相册 解锁部分功能
+项目名称：百度网盘，一刻相册 解锁部分功能
 下载地址：https://t.cn/AiT82mfg
 下载地址：https://t.cn/Ainbj7GV
 脚本作者：chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
 使用说明：非一次性解锁，每次解锁需打开脚本
-本人只需一刻，仅自用
+
 **************************************
 
 [rewrite_local]
@@ -65,6 +65,100 @@ if ($request.url.indexOf(yike) != -1){
 
 if ($request.url.indexOf(ad) != -1){
   chxm1023.switch = "open";
+}
+
+if ($request.url.indexOf(wangpan) != -1){
+  chxm1023.product_infos = [
+    {
+      "product_id" : "5310897792128633390",
+      "end_time" : 4092600296,
+      "buy_time" : "1417260485",
+      "cluster" : "offlinedl",
+      "start_time" : 1417260485,
+      "detail_cluster" : "offlinedl",
+      "product_name" : "gz_telecom_exp"
+    },
+    {
+      "product_name" : "svip2_nd",
+      "product_description" : "超级会员",
+      "function_num" : 0,
+      "start_time" : 1417260485,
+      "buy_description" : "",
+      "buy_time" : 1417260485,
+      "product_id" : "1",
+      "auto_upgrade_to_svip" : 1,
+      "end_time" : 4092600296,
+      "cluster" : "vip",
+      "detail_cluster" : "svip",
+      "status" : 1
+    }
+  ];
+  chxm1023.guide_data = {
+    "title" : "超级会员 SVIP",
+    "content" : "已拥有极速下载+视频倍速特权",
+    "button" : {
+      "text" : "会员中心",
+      "action_url" : "https://pan.baidu.com/wap/vip/user?from=myvip2#svip"
+    }
+  };
+  chxm1023.identity_icon = {
+    "vip" : "https://internal-amis-res.cdn.bcebos.com/images/2019-8/1566452237582/78b88bf113b7.png",
+    "common" : "https://internal-amis-res.cdn.bcebos.com/images/2019-8/1566452539056/bf72cf66fae1.png",
+    "svip" : "https://internal-amis-res.cdn.bcebos.com/images/2019-8/1566452115696/38c1d743bfe9.png",
+    "contentvip" : ""
+  };
+  chxm1023.error_code = 1;
+  delete chxm1023.tips_data_list;
+  delete chxm1023.status_data_arr;
+  delete chxm1023.sub_card_list;
+}
+
+if ($request.url.indexOf(list) != -1){
+  chxm1023.data = [
+    {
+      "sub_title" : "",
+      "id" : 856,
+      "bg_icon" : "",
+      "button_text" : "",
+      "web_url" : "",
+      "type" : 3,
+      "name" : "已解锁SVIP，未完整解锁"
+    },
+    {
+      "sub_title" : "",
+      "id" : 460,
+      "bg_icon" : "",
+      "button_text" : "",
+      "web_url" : "",
+      "type" : 3,
+      "name" : "已拥有极速下载+视频倍速特权"
+    }
+  ];
+}
+
+if ($request.url.indexOf(hf) != -1){
+  delete chxm1023.data;
+}
+
+if ($request.url.indexOf(usercfg) != -1){
+  chxm1023.user_new_define_cards = [
+    {
+      "card_id" : "1",
+      "card_type" : "4",
+      "card_area_name" : "首页笔记-卡片"
+    },
+    {
+      "is_manager" : 1,
+      "card_area_name" : "最近",
+      "card_id" : "1",
+      "card_type" : "7"
+    },
+    {
+      "card_id" : "1",
+      "card_type" : "13",
+      "card_area_name" : "卡片管理-卡片"
+    }
+  ];
 }
 
 $done({body : JSON.stringify(chxm1023)});
