@@ -28,10 +28,8 @@ let userDaysData = $.getjson('@DaysMatter.userDaysData', {'list': []}) // 备用
 // 内置假日
 let defaultDaysData =
     [
-        {'date': '2023-5-14', 'name': '母亲节'},
-        {'date': '2023-6-18', 'name': '父亲节'},
-        {'date': '2023-8-22', 'name': '七夕'},
         {'date': '2023-12-24', 'name': '平安夜'},
+        {'date': '2023-12-25', 'name': '圣诞节'},
         {'date': '2024-1-18', 'name': '腊八节'},
         {'date': '2024-2-2', 'name': '小年'},
         {'date': '2024-2-9', 'name': '除夕'}
